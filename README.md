@@ -1,6 +1,6 @@
 <div align="center">
 
-# 中国专利.skill
+# 中国专利.skill · kcylp 定制版
 
 > 专利点挖掘与交底书（发明/实用/外观）编写，通俗解读专利，嗅探政策动向，辅助审查答复。
 
@@ -11,11 +11,12 @@
 
 <br>
 
+基于 **[handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill)** 深度定制。<br>
 有设计文档和代码，但**专利点还没梳**？交底书要**框图 + 可改 Word**？<br>
 定稿后还要**多轮补材料、纠错**并留下修改追溯？<br>
 公开专利晦涩难懂，想**快速看懂权要与落地语境**？
 
-[初衷](#初衷) · [运行效果](#运行效果) · [功能特性](#功能特性) · [示例](#示例) · [支持作者](#支持作者) · [参考文档](#参考文档) · [安装说明](INSTALL.md) · [技能入口](SKILL.md)
+[初衷](#初衷) · [运行效果](#运行效果) · [功能特性](#功能特性) · [定制增强](#定制增强) · [示例](#示例) · [安装说明](INSTALL.md) · [技能入口](SKILL.md)
 
 </div>
 
@@ -230,24 +231,45 @@
 
 ---
 
-## 支持作者
+## 定制增强
 
-如果这个 Skill 对您有帮助，可以请我喝杯咖啡☕随缘支持，感谢感谢🙏🙏
+本仓库基于 [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) (MIT) 深度定制，在原始版本基础上做了以下增强：
 
-<table width="70%" border="1" cellpadding="12" cellspacing="0">
-<tr>
-<th width="40%" align="center">随缘支持</th>
-<th width="60%" align="center">Star History</th>
-</tr>
-<tr>
-<td width="40%" valign="middle" align="center">
-<img src="docs/thanks.jpg" alt="随缘支持" width="200" />
-</td>
-<td width="60%" valign="middle" align="center">
-<img alt="Star History Chart" src="https://raw.githubusercontent.com/handsomestWei/patent-disclosure-skill/star-history/star-history.svg" width="100%" />
-</td>
-</tr>
-</table>
+### 🚀 v1.0 定制内容（kcylp 版）
+
+| 增强项 | 说明 |
+|--------|------|
+| **Obsidian 笔记模板** | 内置 `assets/obsidian/_专利解读索引.template.md`，首次入库自动配置 CSS、Bases、图谱配色 |
+| **国知局优先查新** | `tools/crawl/cnipa_epub_search.py` 直连中国专利公布公告，支持 `--type` 按发明/实用/外观过滤 |
+| **Mermaid → PNG → Word 全链路** | `mermaid_render.py` 一步完成公式渲染 + mermaid 生图 + Markdown 定稿 + Word 生成 |
+| **LaTeX 公式 OMML 双轨** | 发明交底含公式时，优先 OMML（Word 可编辑公式），失败回退 PNG |
+| **CAD/STEP 多视角提取** | 可选从 `.step` 工程文件自动提取等轴测/三视图 PNG，直接嵌入交底 |
+| **辅助线稿生成** | 外观设计从产品图提炼造型轮廓；实用新型从结构图生成轮廓+部件序号引出 |
+| **审查答复 RAG 案例库** | 向量+标签双轨检索历史答复案例，支持智谱/DashScope/MiniMax/OpenAI 向量模型 |
+| **政策动向嗅探** | 联网扫国知局官网，出「观点↔信源 URL」清单，人工审核后才改技能 |
+| **三专利类型独立模板** | 发明/实用新型/外观设计各有专属 builder + template，不混用 |
+| **多轮迭代修订追溯** | 每轮修改自动追加 `交底书修订对话记录.md`，带时间戳+变更摘要 |
+
+### 📊 原始版本 vs 定制版
+
+| 能力 | 原始版 | 定制版 |
+|------|--------|--------|
+| 专利类型覆盖 | ✅ 发明/实用/外观 | ✅ 发明/实用/外观 + 独立模板 |
+| 交底书成稿 | ✅ Markdown + mermaid | ✅ Markdown + mermaid + Word + OMML 公式 |
+| 查新 | ✅ WebSearch 降级 | ✅ 国知局官方优先 + WebSearch 降级 |
+| 通俗解读 | ✅ 权要树+术语表 | ✅ 权要树+术语表+Obsidian 知识图谱+Canvas |
+| 辅助线稿 | ❌ | ✅ 外观轮廓+实用序号引出 |
+| CAD/STEP | ❌ | ✅ 多视角 PNG 提取 |
+| 审查答复 | ❌ | ✅ 向量 RAG 案例库 |
+| 政策嗅探 | ❌ | ✅ 联网出清单，人审后才改技能 |
+| Obsidian 集成 | 基础 | ✅ 自动配置 CSS/Bases/图谱配色/术语网 |
+| 迭代追溯 | 无记录 | ✅ 修订对话记录（时间戳+摘要） |
+
+---
+
+## 致谢
+
+本项目基于 [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) (MIT License) 定制开发。感谢原作者 [handsomestWei](https://github.com/handsomestWei/) 的出色工作。
 
 ---
 
@@ -266,6 +288,6 @@
 
 <div align="center">
 
-MIT License © [handsomestWei](https://github.com/handsomestWei/)
+MIT License © [handsomestWei](https://github.com/handsomestWei/) · 定制版 © [kcylp](https://github.com/kcylp)
 
 </div>
