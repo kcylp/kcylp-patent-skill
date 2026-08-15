@@ -235,7 +235,7 @@
 
 本仓库基于 [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) (MIT) 深度定制，在原始版本基础上做了以下增强：
 
-### 🚀 v1.0 定制内容（kcylp 版）
+### 🚀 v26.08.15 定制内容（kcylp 版）
 
 | 增强项 | 说明 |
 |--------|------|

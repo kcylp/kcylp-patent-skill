@@ -2,6 +2,8 @@
 
 基于 [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) (MIT) 深度定制。
 
+> **版本 26.08.15** · 公式引擎 v1.0
+
 ## 快速开始
 
 ```bash

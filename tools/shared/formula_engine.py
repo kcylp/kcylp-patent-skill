@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-专利公式引擎 v2.0 · 公式永不错误
+专利公式引擎 v1.0 · 公式永不错误
 ===============================
 
 核心保证：
@@ -689,7 +689,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
     ap = argparse.ArgumentParser(
-        description="专利公式引擎 v2.0 — 验证 · 计算 · 渲染 · 同步检查",
+        description="专利公式引擎 v1.0 — 验证 · 计算 · 渲染 · 同步检查",
     )
     sub = ap.add_subparsers(dest="command")
 
