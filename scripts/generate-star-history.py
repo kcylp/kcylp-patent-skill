@@ -27,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--repo",
-        default=os.environ.get("GITHUB_REPOSITORY", "handsomestWei/patent-disclosure-skill"),
+        default=os.environ.get("GITHUB_REPOSITORY", "kcylp/patent-disclosure-skill"),
         help="Repository in owner/name form. Defaults to GITHUB_REPOSITORY.",
     )
     parser.add_argument(
@@ -112,7 +112,7 @@ def local_gh_token() -> str | None:
 def github_json(url: str, token: str | None, retries: int) -> object:
     headers = {
         "Accept": "application/vnd.github.star+json",
-        "User-Agent": "patent-disclosure-skill-static-star-history",
+        "User-Agent": "kcylp-patent-skill-static-star-history",
         "X-GitHub-Api-Version": "2022-11-28",
     }
     if token:

@@ -1,8 +1,4 @@
-# 中国专利.skill · kcylp 定制版
-
-基于 [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) (MIT) 深度定制。
-
-> **版本 26.08.15** · 公式引擎 v1.0
+# 中国专利.skill · kcylp
 
 ## 快速开始
 
@@ -43,4 +39,4 @@ cd .claude/skills/patent-disclosure-skill/tools && npm install
 
 ## License
 
-MIT · 原始版本 © handsomestWei · 定制版 © kcylp
+MIT · © [kcylp](https://github.com/kcylp)

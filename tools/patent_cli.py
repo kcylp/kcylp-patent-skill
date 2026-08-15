@@ -276,7 +276,7 @@ def cmd_version(args):
     print("中国专利.skill · kcylp 定制版")
     print("=" * 60)
     print(f"  版本: 26.08.15")
-    print(f"  原始: handsomestWei/patent-disclosure-skill (MIT)")
+    print(f"  版本: 26.08.15")
     print(f"  定制: https://github.com/kcylp/patent-disclosure-skill")
     print()
     print("  功能模块:")

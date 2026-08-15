@@ -11,7 +11,6 @@
 
 <br>
 
-基于 **[handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill)** 深度定制。<br>
 有设计文档和代码，但**专利点还没梳**？交底书要**框图 + 可改 Word**？<br>
 定稿后还要**多轮补材料、纠错**并留下修改追溯？<br>
 公开专利晦涩难懂，想**快速看懂权要与落地语境**？
@@ -233,7 +232,7 @@
 
 ## 定制增强
 
-本仓库基于 [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) (MIT) 深度定制，在原始版本基础上做了以下增强：
+本仓库在原始版本基础上做了以下增强：
 
 ### 🚀 v26.08.15 定制内容（kcylp 版）
 
@@ -267,13 +266,11 @@
 
 ---
 
-## 致谢
+<div align="center">
 
-本项目基于 [handsomestWei/patent-disclosure-skill](https://github.com/handsomestWei/patent-disclosure-skill) (MIT License) 定制开发。感谢原作者 [handsomestWei](https://github.com/handsomestWei/) 的出色工作。
+MIT License © [kcylp](https://github.com/kcylp)
 
----
-
-## 参考文档
+</div>
 
 - [技能入口与 Agent 流程](SKILL.md)（交底 / 解读 / 进化 / 审查答复）
 - [详细安装说明](INSTALL.md)
@@ -288,6 +285,6 @@
 
 <div align="center">
 
-MIT License © [handsomestWei](https://github.com/handsomestWei/) · 定制版 © [kcylp](https://github.com/kcylp)
+MIT License © [kcylp](https://github.com/kcylp)
 
 </div>
