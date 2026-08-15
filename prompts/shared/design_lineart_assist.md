@@ -83,3 +83,6 @@ python ${CLAUDE_SKILL_DIR}/tools/shared/design_lineart_gate.py --enable-design-l
 - [ ] 未做纯文生图  
 - [ ] 多视参照了 `relates_to` / `relates_hint`  
 - [ ] figure_plan 中辅助线稿默认 `use_in_disclosure: false`  
+- [ ] **排版硬标准**：线稿为黑白（黑线白底）、SVG 最高清晰度、放大不失真、线条粗细适中（主线 0.5–1.0pt）、标注清晰可读  
+- [ ] **图号对应**：线稿中所有标注数字与正文引用、figure_plan 编号一一对应  
+- [ ] **无重叠挤压**：线稿各视图独立排版、间距充足、不重叠  

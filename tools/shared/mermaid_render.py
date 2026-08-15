@@ -16,6 +16,12 @@
 
 **清晰度**：默认对 ``mmdc`` 传入较大视口（``-w`` / ``-H``）与 ``-s 2``（Puppeteer 像素密度），PNG 在 Word 中按约 5.5 英寸宽嵌入时更锐利。可用 ``--mmdc-scale 3`` 等进一步提高（文件更大）。
 
+**专利排版硬标准**：mermaid 渲染结果须满足以下要求（否则不得交付）：
+- **黑白**：所有节点/连线/箭头为黑色，背景为白色，禁止彩色
+- **最高清晰度**：放大后不模糊不失真，推荐 ``--mmdc-scale 3 --mmdc-width 1600 --mmdc-height 1200``
+- **图号对应**：mermaid 节点内的标注须与正文引用图号一一对应
+- **排版整洁**：节点间距充足，连线不交叉重叠，文字不溢出边框
+
 用法：
   python tools/shared/mermaid_render.py -i draft.md -o disclosure.md
   # 默认在同目录生成 disclosure.docx；失败时 stderr 会给出可复制的 md_to_docx 命令

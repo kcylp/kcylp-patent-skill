@@ -90,3 +90,6 @@ python ${CLAUDE_SKILL_DIR}/tools/shared/structure_lineart_gate.py --enable-struc
 - [ ] `uncertain` 件未画死序号  
 - [ ] 优先 overlay；figure_plan 辅助条默认 `use_in_disclosure: false`  
 - [ ] 未误用 `design_lineart_*`  
+- [ ] **排版硬标准**：线稿为黑白（黑线白底）、SVG 最高清晰度、放大不失真、线条粗细适中（主线 0.5–1.0pt）、标注清晰可读  
+- [ ] **图号对应**：所有部件序号与 `structure_schema.parts` 的 id 完全一致；跨图同一部件序号不改  
+- [ ] **无重叠挤压**：各视图独立排版、间距充足、不重叠  
