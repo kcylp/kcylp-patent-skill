@@ -70,7 +70,7 @@ Cursor 也会扫描 **`~/.claude/skills/`**、项目内 **`.claude/skills/`** �
 pip install -r requirements.txt
 ```
 
-**发明**交底定稿须同时产出 **.md + .docx**，且将 **mermaid**（**3.2 系统框图**与 **3.4 流程图**）经 **`tools/shared/mermaid_render.py`** 转为 PNG 嵌入。**mermaid** 须 **Node.js**：在 **`tools/`** 执行 **`npm install`**（含 **`puppeteer`**）；若 **`mmdc`** 报找不到 Chrome，再执行 **`npx puppeteer browsers install chrome-headless-shell`**。详见 **`tools/README.md`**。
+**发明**交底定稿须同时产出 **.md + .docx**，且将 **mermaid**（**3.2 系统框图**与 **3.4 流程图**）经 **`tools/shared/mermaid_render.py`** 转为 PNG 嵌入。**mermaid** 须 **Node.js**（`@mermaid-js/mermaid-cli` 要求 `^18.19 || >=20.0`，Node 24 已实测兼容）：在 **`tools/`** 执行 **`npm install`**（含 **`puppeteer`**）；若 **`mmdc`** 报找不到 Chrome，再执行 **`npx puppeteer browsers install chrome-headless-shell`**。详见 **`tools/README.md`**。
 
 **实用新型 / 外观**定稿以各类型 `prompts/disclosure/utility_model|design/disclosure_builder.md` 为准：填表产出 `structure_schema`/`appearance_schema` + **`figure_plan.yaml`**，成文只嵌清单入文图（结构图或视图；docx 对实用建议、对外观可选）。
 
