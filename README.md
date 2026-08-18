@@ -250,6 +250,12 @@
 | **多轮迭代修订追溯** | 每轮修改自动追加 `交底书修订对话记录.md`，带时间戳+变更摘要 |
 | **Mermaid Node.js 兼容** | `@mermaid-js/mermaid-cli` 升至 `^11.12.0`，兼容 Node 18.19+ / 20+ / 24+（INSTALL.md 已标注引擎范围） |
 
+### 🔧 v26.08.18 修复（kcylp 版）
+
+| 修复项 | 说明 |
+|--------|------|
+| **Node 20 安装报 EBADENGINE** | 旧 `package-lock.json` 锁到 `langium 4.2.2 → chevrotain 12`（2026-03 起要求 Node ≥22），Node 20 下 `npm install` 报警告/失败。现 `tools/package.json` 增加 `overrides: { "langium": "4.2.1" }`（chevrotain 11 系，`node >=20.10`），并全量重新生成 lockfile：解析至 mermaid-cli 11.16.0 / @mermaid-js/parser 1.2.0，全依赖树扫描 **0 个包要求 Node ≥22**，Node 18.19 / 20 / 22 / 24 均可干净安装，`mmdc` 渲染实测通过 |
+
 ### 📊 原始版本 vs 定制版
 
 | 能力 | 原始版 | 定制版 |
