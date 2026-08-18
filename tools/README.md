@@ -129,6 +129,16 @@ npm install
 npx puppeteer browsers install chrome-headless-shell
 ```
 
+> **⚠️ Node 20 下 `npm install` 报 `EBADENGINE ... chevrotain ... required node >=22`？**
+> 你在用 v26.08.17 或更早的版本（旧 lockfile 锁死了要求 Node ≥22 的 chevrotain 12），v26.08.18 已修复。升级：**更新仓库 → 删掉 `tools/node_modules` → 重新 `npm install`**（不删 node_modules 旧包会残留）：
+>
+> ```powershell
+> rmdir /s /q tools\node_modules
+> cd tools
+> npm install
+> npx mmdc --version   # 验证
+> ```
+
 （或按报错提示选用 `chrome` 等；详见 [Puppeteer 文档](https://pptr.dev/)。）
 
 ### mermaid CLI 与手动试转

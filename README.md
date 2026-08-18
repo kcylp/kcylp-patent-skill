@@ -256,6 +256,17 @@
 |--------|------|
 | **Node 20 安装报 EBADENGINE** | 旧 `package-lock.json` 锁到 `langium 4.2.2 → chevrotain 12`（2026-03 起要求 Node ≥22），Node 20 下 `npm install` 报警告/失败。现 `tools/package.json` 增加 `overrides: { "langium": "4.2.1" }`（chevrotain 11 系，`node >=20.10`），并全量重新生成 lockfile：解析至 mermaid-cli 11.16.0 / @mermaid-js/parser 1.2.0，全依赖树扫描 **0 个包要求 Node ≥22**，Node 18.19 / 20 / 22 / 24 均可干净安装，`mmdc` 渲染实测通过 |
 
+> **⬆️ 已装过旧版的用户升级方法**（v26.08.17 及更早 → v26.08.18）：
+> 1. 重新下载本仓库 zip（或 `git pull`）
+> 2. **删掉 `tools/node_modules` 整个文件夹**（不删则旧的 chevrotain 12 仍残留）
+> 3. 在 `tools/` 下重新执行 `npm install`
+>
+> ```powershell
+> cd <仓库目录>\tools
+> rmdir /s /q node_modules
+> npm install
+> ```
+
 ### 📊 原始版本 vs 定制版
 
 | 能力 | 原始版 | 定制版 |
